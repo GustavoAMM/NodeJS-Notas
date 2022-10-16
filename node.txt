@@ -5,4 +5,30 @@ Node
 Es un entorno de ejecución de js
 esta construido con V8 (motor de google)
 
+cada parte de un proyecto en node se le conoce como modulos y cada uno tiene una tarea 
+
+===== Modulos (exportado individualmente) ====
+
+LOs modulos nos permiten divir nuestra aplicación en diversas partes
+
+=> Para exportar algo de un documento, ejemplo: funciones de una calculadora basica, necesitamos exportar las funciones para poder ser utilizado en otro documento atraves de un objetos
+
+Ejemplo: 
+(se utuliza la palabra "exports" el nombre que le damos y que funcion va a utilizar)
+
+function add(x1,x2){
+    return x1 + x2
+  }
+
+  exports.add = add;
+
+=> Para importa aldo de un documento externo y porder utilizar el objeto se guarda en una constante:
+
+Ejemplo:
+(se utiliza la palabra "require" seguido de la ruta(node necesita toda la ruta, desde donde esta instalado hasta la ubicación del archivo))
+
+    const math=require("./logica");
+    math.add(1,2);
+
+
 

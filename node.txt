@@ -1,0 +1,8 @@
+Node
+
+¿Qué es?
+
+Es un entorno de ejecución de js
+esta construido con V8 (motor de google)
+
+

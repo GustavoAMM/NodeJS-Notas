@@ -154,6 +154,8 @@ npm init
 
 nos preguntará varias cosas que nosotros necesitamos llenar o dejar en blanco y este cuando finalice creara un documento llamado package.json, este es un archivo de configuración, da información del proyecto.
 
+con el comando npm init -y => no pregunta nada y lo crea en automatico
+
 dentro de él hay una propiedad llamado "dependencies" con las dependencias que necesita el proyecto para que funcione
 
 por ende cuando lo duba a un servidor el servidor correrra el comando "npm install" y descargara todas las dependencias que necesite el poryecto para ser desplegado correrctamente

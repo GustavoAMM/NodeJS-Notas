@@ -127,3 +127,56 @@ server.listen(3000, function () {
 usando un modulo pre-construidos (http) podemos crear un server
 siempre es bueno tener todo por separado, en este caso en constantes, ejemplo: el metodo http, el servidor, y el puerto.
 
+=== framework === 
+
+nmp = node package manager
+
+es un administrador de paquetes en node,  permite administrar paquetes o modulo de node
+
+LInk => https://www.npmjs.com/ (para buscar modulos)
+
+ejemplo de instalación de un modulo de colores:
+
+npm install colors
+
+//codigo
+const colors = require("colors");
+
+server.listen(3000, function () {
+  console.log("Servidor on port 3000".red);
+});
+
+NOTA= Sí queremos subir nuestro proyecto a un servidor este servidor necesita la lista de los modulos que hemos instaldo para eso nos ayuda un comando llamado init
+
+//comando
+
+npm init 
+
+nos preguntará varias cosas que nosotros necesitamos llenar o dejar en blanco y este cuando finalice creara un documento llamado package.json, este es un archivo de configuración, da información del proyecto.
+
+dentro de él hay una propiedad llamado "dependencies" con las dependencias que necesita el proyecto para que funcione
+
+por ende cuando lo duba a un servidor el servidor correrra el comando "npm install" y descargara todas las dependencias que necesite el poryecto para ser desplegado correrctamente
+
+otro apartado importante en el package json es el atributo de scrips ya que en este podemos colocar cualquier instruccion que nosotros quieramos, por ejemplo que inicie el servidor nuestro proyecto
+
+"scripts": {
+    "start" : "node index.js"
+  }
+y para correr el comando es: npm start 
+NOTA => solo node conoce el comadno start
+si quieremos añadir un comando personalizado necesitamos hacerlo difercente por ejemplo 
+
+  "scripts": {
+    "start" : "node index.js",
+    "desarrollo":"node index.js"
+  },
+  para este necesitamos correrlo con: npm run dev
+
+=============Resumen=============
+EL package.json tiene toda la informacion del proyecto
+para poder ser desplegado
+=================================
+
+
+

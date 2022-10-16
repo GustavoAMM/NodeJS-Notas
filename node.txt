@@ -31,4 +31,32 @@ Ejemplo:
     math.add(1,2);
 
 
+=== Modulos (exportar en un objeto) ===
+
+Ejemplo:
+
+//creamos una constante para guardar el objeto vacio
+const Math = {}
+
+//creamos una funcion o lo que queremos exportar 
+function add(x1,x2){
+    return x1 + x2
+  }
+
+//le añadimos atributos al objeto 
+Math.add = add;
+
+//exportamos el objeto en este caso
+module.exports = Math;
+
+y para importar se hace de la misma manera que individualmente
+
+===================resumen===================
+el primer ejepmlo exportamos una propiedad de un objeto
+el segun ejemplo exportamos un objeto, pero tambien podemos exportar una función, variables, etc,(cualquier dato de JS)
+=============================================
+
+
+
+
 

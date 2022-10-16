@@ -1,4 +1,4 @@
-Node
+====>Node<===
 
 ¿Qué es?
 
@@ -56,7 +56,57 @@ el primer ejepmlo exportamos una propiedad de un objeto
 el segun ejemplo exportamos un objeto, pero tambien podemos exportar una función, variables, etc,(cualquier dato de JS)
 =============================================
 
+=== Modulos pre-construidos ====
 
+son modulos que cuando instalamos node, estos se instalan a su par, es decir, bienen incluidos por defualt 
 
+=>Para importar un modulo pre-construidos es casi igual que lo haciamos antes, a diferencia que no necesita toda la ruta(con el .)solo se escibre el nombre del modulo y ya.
+
+Se pueden ver todos los modulos pre-construidos desde la documentación oficial de node
+
+link => https://nodejs.org/dist/latest-v16.x/docs/api/
+
+Ejemplo:
+  const os = require('node:os');
+
+Es comun y muy recomendable poner el nombre del modulo al nombre de la constante 
+Para las funcionalidades de estos modulo es necesario checar la documentación ya que no esta escrito por nosotros
+
+ejemplos:
+  const os = require("node:os");
+  console.log(os.platform());
+
+  const os = require("node:os");
+  console.log("memoria libre: " + os.freemem() + " bytes");
+
+=======================resumen=======================
+NOTA = son modulos core, son modulos que nos permiten trabajar a muy bajo nivel
+un callback es una función que se ejecuta automaticamante despues de hacer algo
+=====================================================
+
+=== programación asincrona usando un modulo pre-construidos ===
+
+un callback es una función que se ejecuta automaticamante despues de hacer algo
+funcion asincrona ejemplo:
+
+const fs = require("node:fs");
+
+fs.readFile("./texto.txt", function (err, data) {
+  if (err) {
+    console.log(err);
+  }
+  if (data) {
+    console.log(data.toString());
+  }
+});
+
+=>CODIGO BLOQUEANTE
+
+La manera en la que hubieramos hecho esto nosotros:
+const resultado = write("","")
+=> sin embargo esto se conoce como codigo bloqueante, ya que tenemos que esperar a que termine este codigo, para que se puede ejecutar el codigo abajo o el siguiente y esto no pasa en nodejs
+
+Se usan funciones asincronas cuando en el codigo se hacen tareas que node no hace,
+ejemplo: para insertar datos en una base de datos, nodejs no hace eso, por ende, se usa la programación asincrona y continua con el codigo y cuando termina la bd nodejs lo detecta y hace lo que le indiquemos 
 
 

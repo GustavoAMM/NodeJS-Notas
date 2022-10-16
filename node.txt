@@ -109,4 +109,21 @@ const resultado = write("","")
 Se usan funciones asincronas cuando en el codigo se hacen tareas que node no hace,
 ejemplo: para insertar datos en una base de datos, nodejs no hace eso, por ende, se usa la programación asincrona y continua con el codigo y cuando termina la bd nodejs lo detecta y hace lo que le indiquemos 
 
+=== Servidores NodeJS === 
+
+const http = require("http");
+const handelServer = function (req, res) {
+  res.writeHead(200, { "content-type": "text/plain" });
+  res.write("Hola NOdeJS");
+  res.end();
+};
+
+const server = http.createServer(handelServer);
+
+server.listen(3000, function () {
+  console.log("Servidor on port 3000");
+});
+
+usando un modulo pre-construidos (http) podemos crear un server
+siempre es bueno tener todo por separado, en este caso en constantes, ejemplo: el metodo http, el servidor, y el puerto.
 

@@ -178,5 +178,25 @@ EL package.json tiene toda la informacion del proyecto
 para poder ser desplegado
 =================================
 
+=== framework Express ===
 
+es un framework para crear servidores 
+link => https://expressjs.com/
+
+para instalarlo necesitmos el sig comando : npm i express
+
+mismo ejemplo pero con express:
+
+
+const colors = require("colors");
+const express = require("express");
+const server = express();
+
+server.get("/", function (req, res) {
+  res.send("<h1>Hola mundo con express y node</h1>");
+});
+
+server.listen(3000, function () {
+  console.log("server on port 3000".red);
+});
 

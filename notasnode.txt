@@ -55,4 +55,12 @@ const age = 40;
    console.log("Es menor a 30");
   }
 
+=== node vs navegador === 
+
+como sabemos dentro del navegador podemos acceder con js a muchas funcionalidades de la web
+por ejemplo: document.tittle, el window.innerHeight, el document.body.innerHTML, etc
+en node tenemos acceso a diferentes objetos del sistema operativo ya que en este se esta executando node
+por ejemplo: os.userInfo(), os.arch(), os.homedir()
+
+
 

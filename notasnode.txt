@@ -93,3 +93,98 @@ Ejemplo 2:
     }, 5000);
 
 este es setTimeout y tiene que esperar algo para que pueda ejecutarse, en este caso tiene que esperar 5s para poder ejecutar el console.log
+
+
+=== modulos ===
+
+como vimos antes module es un objeto global, es decir todos los archivos tienen acceso a él,
+podemos llenar el export con variables, constantes, y poder usarlo fuera
+
+Ejemplo:
+
+    const www = "cisco.com";
+
+    module.exports = www;
+
+    console.log(module);
+
+exportar una constante, ahora desde module podemos acceder a ella
+
+para importar es:
+
+const www = require("./module/mymodule"); => se necesita la ruta relativa, para especificar que archivo importar, y se guarda en una constante 
+
+console.log(www);
+
+PERO sí  queremos exportar mas de una cosa, por ejemplo mas constantes, podemos meter todas las constantes en un nuevo objeto y 
+exportar el objeto.
+
+Ejemplo: 
+
+const www = "cisco.com";
+const numer = 123;
+const array = [1, 2, 3, 4];
+const name = {
+  name: "angel",
+  age: 20,
+};
+
+const group = {
+  web: www,
+  number: numer,
+  array: array,
+  user: name,
+};
+
+module.exports = group;
+
+####### Versió mejor para exportar ######
+
+para ahorrar una linea de code podemos hacer lo siguiente:
+
+module.exports = {
+  web: www,
+  number: numer,
+  array: array,
+  user: name,
+};
+
+hacer que module.export sea igual al objeto que queremos exportar, sin la necesidad de crear la constante group
+
+
+#### versión mejor x2 para exportar ####
+
+module.exports = {
+  www,
+  numer,
+  array,
+  name,
+};
+
+podemos poner unicamente el nombre de las constantes sin la necesidad de un nombre ahorrando tiempo.
+
+### versión mejor para importar ####
+
+  const { name } = require("./module/myModule");
+
+  console.log(name);
+
+con lo nuevo de js podemos importar solo una propiedad del objeto, en el caso anterior importamos el la propiedad name
+
+  const { name, www } = require("./module/myModule");
+
+  console.log(name);
+  console.log(www);
+
+  esto nos ayuda si el objeto es demasiado grande y a nosotros solo nos importa ciertas cosas.
+
+
+
+
+
+
+
+
+
+
+

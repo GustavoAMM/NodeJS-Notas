@@ -31,4 +31,28 @@ ejemplo:
 para guardar comando de replel con : .sabe nombre_del_archivo
 para cargar archivos guardados con : .load nombre_del_archivo
 
+=== Js ===
+
+se puede utilizar js vanilla  
+ejemplo:
+
+  let username = "angel";
+  let age = 20;
+  let hobbies = true;
+  let points = [10, 20, 30];
+  let user = {
+    name: "angel",
+    last: "montoya",
+  };
+  const pi = 3.1416;
+
+ejemplo: 
+const age = 40;
+
+  if (age > 30) {
+    console.log("Es mayor a 30");
+  } else {
+   console.log("Es menor a 30");
+  }
+
 

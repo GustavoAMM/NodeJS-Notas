@@ -178,7 +178,26 @@ con lo nuevo de js podemos importar solo una propiedad del objeto, en el caso an
 
   esto nos ayuda si el objeto es demasiado grande y a nosotros solo nos importa ciertas cosas.
 
+=== exports individuales ===
 
+como hemos visto anteriormente la manera en la que se le puede asignar a export dentro de module si son mucho es atraves de un objeto y al ser un objeto podemos insertar de manera diferente.
+
+Ejemplo:
+
+const www = "cisco.com";
+const numer = 123;
+const array = [1, 2, 3, 4];
+const name = {
+  name: "angel",
+  age: 20,
+};
+
+module.exports.name = { name };
+module.exports.numer = { numer };
+module.exports.www = { www };
+module.exports.array = { array };
+
+Notas => es poco útil, es valido, pero es mejor guardar todo en un objeto(como el ejemplo de arriba) podria servir si del archivo no queremos exportar todo, un ejemplo podria ser una variable, una constante, etc.
 
 
 

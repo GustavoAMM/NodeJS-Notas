@@ -74,3 +74,22 @@ console.log(module); => da información como el id, path, filename,
 console.log(require); => da información varia
 console.log(process); => da información acerca de los procesos por ejemplo: version de node, del v8, del uv, etc.
 
+=== timers ===
+
+algunos los trae por defecto y sirve para tener un poco de control sobre el timepo de ejecición de un comando 
+
+Ejemplo:
+
+    setInterval(() => {
+      console.log("hola mundo");
+    }, 2000);
+
+esta es setInterval y cada dos segundos va a ejecutar una función flecha, en este caso es un console.log
+
+Ejemplo 2: 
+
+    setTimeout(() => {
+      console.log("Hola mundo");
+    }, 5000);
+
+este es setTimeout y tiene que esperar algo para que pueda ejecutarse, en este caso tiene que esperar 5s para poder ejecutar el console.log

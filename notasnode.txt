@@ -62,5 +62,15 @@ por ejemplo: document.tittle, el window.innerHeight, el document.body.innerHTML,
 en node tenemos acceso a diferentes objetos del sistema operativo ya que en este se esta executando node
 por ejemplo: os.userInfo(), os.arch(), os.homedir()
 
+=== objetos globales ===
 
+a diferencia del navegaro en node tenemos objetos globales
+por ejemplo:
+
+console.log(__dirname); => da la dirección completa actual del directorio
+console.log(__filename); => da la dirección completa actual del documento
+
+console.log(module); => da información como el id, path, filename, 
+console.log(require); => da información varia
+console.log(process); => da información acerca de los procesos por ejemplo: version de node, del v8, del uv, etc.
 

@@ -1,0 +1,34 @@
+===Notas del curso de nodeJS===
+
+domingo 16 de octubre de 2022
+requisitos previos: HTML, CSS, JS
+
+=== ¿Qué es? ===
+
+ES un entorno de ejecución de js (Javascript runtime enviorement)
+
+Programa que nos permite utilizar js para uso de aplicaciones de escritorio, servidor, consola haciendo js de uso generar y no solo en el navegador.
+
+utilizando v8 fue creado para soportar muchos usuarios sin la necesidad de muchos recursos.
+
+Es posible crear aplicaciones fullstack
+
+=== comandos básicos ===
+
+=>Repel: interprete de node, nos permite ejecutar js de manera interactiva.(es equivalente a la consola del navegador)
+
+node --version -> ver versión de node
+.help -> muestra ayuda para ver los demas comandos
+.exit -> salir de node
+ctrl + d -> terminar node
+ctrl + c -> matar el proceso
+
+nodeJS  puede interpretar codigo sin la necesidad de entrar en su terminal 
+
+ejemplo:
+  node -e "console.log(10 + 10)"
+
+para guardar comando de replel con : .sabe nombre_del_archivo
+para cargar archivos guardados con : .load nombre_del_archivo
+
+

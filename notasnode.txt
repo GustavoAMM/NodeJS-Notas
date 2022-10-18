@@ -250,3 +250,22 @@ console.log(path.dirname(filepath)); => nos da la ruta del archivo
 console.log(path.parse(filepath)); = > parsea la ruta a un objeto de tipo json
 console.log(path.resolve(filepath)); => resuelve la ruta por si esta incompleta
 
+=== modulo (fs) ===
+
+nos permite manipular archivos
+ejemplo:
+
+const fs = require("fs");
+
+//leer archivos
+const first = fs.readFileSync("./data/first.txt");
+const second = fs.readFileSync("./data/second.txt");
+
+console.log(first.toString());
+console.log(second.toString());
+
+let body = "este es el titulo del archivo";
+
+//escribir archivos
+fs.writeFileSync("./data/cuatro.txt", body, { flag: "a" });
+

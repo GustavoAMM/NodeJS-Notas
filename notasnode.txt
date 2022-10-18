@@ -220,6 +220,33 @@ console.table({
 });
 
 
+=== modulos (path) ===
+
+En este modulo es de suma importancia tener en cuenta el entorno de donde se esta desarrollando ya que las rutas cambian 
+dependiendo del sistema operativo.
+
+Ejemplo: en windows es => C:\\user\\angel\\escritorio\\ejemplo
+y en linux es => home/angel/escritorio
+
+y debemos tenerlo en cuenta ya que normalmente en los servidores que se montan usan linux como sistema operativo
+y con el modulo path nos ayuda a solucionar este dilema.
+
+ejemplo: 
+
+const path = require("path");
+console.log(path.join("home", "angel", "escritorio"));
 
 
+❯ node path.js
+home/angel/escritorio
+
+ejemĺo: 
+
+const path = require("path");
+
+const filepath = path.join("home", "escritorio", "MERN", "NodeJS");
+console.log(path.basename(filepath)); => nos na el nombre del archivo
+console.log(path.dirname(filepath)); => nos da la ruta del archivo
+console.log(path.parse(filepath)); = > parsea la ruta a un objeto de tipo json
+console.log(path.resolve(filepath)); => resuelve la ruta por si esta incompleta
 

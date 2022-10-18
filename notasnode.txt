@@ -250,7 +250,7 @@ console.log(path.dirname(filepath)); => nos da la ruta del archivo
 console.log(path.parse(filepath)); = > parsea la ruta a un objeto de tipo json
 console.log(path.resolve(filepath)); => resuelve la ruta por si esta incompleta
 
-=== modulo (fs) ===
+=== modulo (fs) part1 ===
 
 nos permite manipular archivos
 ejemplo:
@@ -269,3 +269,48 @@ let body = "este es el titulo del archivo";
 //escribir archivos
 fs.writeFileSync("./data/cuatro.txt", body, { flag: "a" });
 
+=== modulo (fs) part2 ===
+
+como vimos anteriormente los metodos tenian un Sync es decir esta funcionando asincronamente, ya que node es un entorno de ejecución asincrona 
+
+la programación sincrona es cuando tienes que esperar a que acabe una tarea para seguir con la siguiente
+
+un callback es : Una función de callback es una función que se pasa a otra función como un argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción.
+
+en conclusión la programación asincrona nos permite realizar varias tareas a la par un ejemplo es el siguiente:
+
+
+fs.readFile("./data/first.txt", "utf-8", (error, data) => {
+  if (error) {
+    console.log(error);
+  }
+  console.log(data);
+
+  fs.readFile("./data/second.txt", "utf-8", (error, data) => {
+    if (error) {
+      console.log(error);
+    }
+    console.log(data);
+
+    fs.writeFile(
+      "./data/cinco.txt",
+      "hola mundo archivo cinco",
+      (error, data) => {
+        console.log(error);
+        console.log(data);
+
+        fs.writeFile(
+          "./data/seis.txt",
+          "hola mundo archivo seis",
+          (error, data) => {
+            console.log(error);
+            console.log(data);
+          }
+        );
+      }
+    );
+  });
+});
+
+
+sin embargo tiene su fallo, es que el codigo se va haciendo a la derecha,(este ejemplo es de node anteriormente)

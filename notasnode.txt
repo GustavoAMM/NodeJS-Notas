@@ -345,3 +345,35 @@ http
 
 console.log("servidor escuchando puerto 3000");
 
+=== npm ===
+
+link => https://www.npmjs.com/
+
+repositorios de paquetes 
+
+para instalar un modulo es:
+
+npm install nomule_name => manera completa 
+npm i module_name => manera abreviada
+npm i moduel_name moduel_name2 moduel_name3 => instalar varios modulos a la vez
+
+cuando instalamos un paquete nos crea archivos automaticamente por ejemplo:
+
+-package.json => nos muestra las dependencias del proyecto
+-package-lock.json => no es buena idea alterarlo a mano, es parte del funcionamiento de node
+
+En cuanto instalamos muchos modulos la carpeta node_modules se va a comenzar a llenar y es muy recomendable no tocar nada
+el archivo package.json va a agregar los modulos que instalamos.
+
+si llegaramos a borrar la carpeta node_modules gracias al package.json y con el comando npm install automaticamente va a 
+descargar todos los modulos que necesita el pryecto
+
+tambien para borrar un modulo existe un comando:
+
+npm remove module_name
+
+
+
+
+
+

@@ -314,3 +314,34 @@ fs.readFile("./data/first.txt", "utf-8", (error, data) => {
 
 
 sin embargo tiene su fallo, es que el codigo se va haciendo a la derecha,(este ejemplo es de node anteriormente)
+
+=== request === 
+
+Es información acerca del cliente que despues yo puedo utilizar en el backend 
+ejemplo de rutas:
+
+const http = require("http");
+
+http
+  .createServer((request, response) => {
+    console.log(request.url);
+    if (request.url === "/") {
+      response.write("Welcome to the server");
+      return response.end();
+    }
+    if (request.url === "/about") {
+      response.write("acerca de");
+      return response.end();
+    }
+
+    response.write(`
+    <h1>Not found</h1>
+    <p>Esta pagina no fue encontrada xd<p>
+    <a href="/">Volver a la pagina principal</a>
+    `);
+    response.end();
+  })
+  .listen(3000);
+
+console.log("servidor escuchando puerto 3000");
+

@@ -414,3 +414,8 @@ npm i module_name -g
 
 si utilizas linux te pide permisos de super usuario 
 
+=== npx ===
+descargar modulos y los ejecuta inmediatamente 
+sirve para provar modulos sin instalarlos ni el proyecto ni globalmente
+
+

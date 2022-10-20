@@ -501,17 +501,19 @@ Para instalar un paquete que solo sirve para desarrollo ocupamos el siguiente co
 
 Este comando creará una nueva sección en el package.json llamado: "devDependencies"
 
-=== modulos globales === 
+## Modulos globales
 
-como hemos visto en anterioridad podemos instalar paquetes para nuestros proyectos,sin embargo, hay una manera de instalarlos 
-en el computador lo que nos permite que este disponible para todos nuestros proyectos con el siguiente comando:
+Como hemos visto en anterioridad podemos instalar paquetes para nuestros proyectos,sin embargo, hay una manera de instalarlos en el computador lo que nos permite que este disponible para todos nuestros proyectos con el siguiente comando:
 
-npm i module_name -g
+  ```
+    npm i module_name -g
 
-si utilizas linux te pide permisos de super usuario 
+  ```
 
-=== npx ===
-descargar modulos y los ejecuta inmediatamente 
-sirve para provar modulos sin instalarlos ni el proyecto ni globalmente
+> Sí utilizas linux te pide permisos de super usuario 
+
+## npx 
+
+Descargar modulos y los ejecuta inmediatamente, sirve para provar modulos sin instalarlos ni el proyecto ni globalmente.
 
 

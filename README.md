@@ -213,7 +213,7 @@ Para ahorrar una linea de código podemos hacer lo siguiente:
 
 ```
 
-Con lo nuevo de js podemos importar solo una propiedad del objeto, en el caso anterior importamos la propiedad name.
+Con lo nuevo de JavaScript podemos importar solo una propiedad del objeto, en el caso anterior importamos la propiedad name.
 
 Ejemplo:
 
@@ -223,13 +223,11 @@ Ejemplo:
     console.log(www);
     
   ```
-> Esto nos ayuda si el objeto es demasiado grande y a nosotros solo nos importan ciertas cosas.
+> Esto nos ayuda sí el objeto es demasiado grande y a nosotros solo nos importan ciertas cosas.
 
 ## Exports individuales
 
-Como hemos visto anteriormente la manera en la que se le puede 
-asignar a export dentro de module si son mucho es atraves de 
-un objeto y al ser un objeto podemos insertar de manera diferente.
+Como hemos visto anteriormente la manera en la que se le puede asignar a export dentro de module si son mucho es atraves de un objeto y al ser un objeto podemos insertar de manera diferente.
 
 Ejemplo:
 
@@ -249,10 +247,7 @@ Ejemplo:
 
   ```
 
-> Notas: es poco útil, es valido, pero es mejor guardar 
-> todo en un objeto(como el ejemplo de arriba) podria servir 
-> si del archivo no queremos exportar todo, un ejemplo podria 
-> ser una variable, una constante, etc.
+> Notas: es poco útil, es valido, pero es mejor guardar todo en un objeto(como el ejemplo de arriba) podria servir sí del archivo no queremos exportar todo, un ejemplo podría ser una variable, una constante, etc.
 
 
 ## modulos (OS)

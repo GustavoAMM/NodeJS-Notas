@@ -309,70 +309,79 @@ Ejemĺo de utilidad:
 
   ```
 
-=== modulo (fs) part1 ===
+## Modulo (fs)
 
-nos permite manipular archivos
-ejemplo:
+Nos permite manipular archivos dentro de nuestro sistema.
 
-const fs = require("fs");
+Ejemplo:
 
-//leer archivos
-const first = fs.readFileSync("./data/first.txt");
-const second = fs.readFileSync("./data/second.txt");
+  ```
 
-console.log(first.toString());
-console.log(second.toString());
+    const fs = require("fs");
 
-let body = "este es el titulo del archivo";
+    //leer archivos
+    const first = fs.readFileSync("./data/first.txt");
+    const second = fs.readFileSync("./data/second.txt");
 
-//escribir archivos
-fs.writeFileSync("./data/cuatro.txt", body, { flag: "a" });
+    console.log(first.toString());
+    console.log(second.toString());
 
-=== modulo (fs) part2 ===
+    let body = "este es el titulo del archivo";
 
-como vimos anteriormente los metodos tenian un Sync es decir esta funcionando asincronamente, ya que node es un entorno de ejecución asincrona 
+    //escribir archivos
+    fs.writeFileSync("./data/cuatro.txt", body, { flag: "a" });
 
-la programación sincrona es cuando tienes que esperar a que acabe una tarea para seguir con la siguiente
+  ```
 
-un callback es : Una función de callback es una función que se pasa a otra función como un argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción.
+Como vimos anteriormente los metodos tenian un Sync es decir esta funcionando asincronamente, ya que node es un entorno de ejecución asincrona.
 
-en conclusión la programación asincrona nos permite realizar varias tareas a la par un ejemplo es el siguiente:
+La programación sincrona es cuando tienes que esperar a que acabe una tarea para seguir con la siguiente.
 
+> Callback: Una función de callback es una función que se pasa a otra función como un argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción.
 
-fs.readFile("./data/first.txt", "utf-8", (error, data) => {
-  if (error) {
-    console.log(error);
-  }
-  console.log(data);
+La programación asincrona nos permite realizar varias tareas a la par. 
 
-  fs.readFile("./data/second.txt", "utf-8", (error, data) => {
-    if (error) {
+Ejemplo:
+
+  ```
+
+    fs.readFile("./data/first.txt", "utf-8", (error, data) => {
+      if (error) {
       console.log(error);
     }
+    
     console.log(data);
 
-    fs.writeFile(
-      "./data/cinco.txt",
-      "hola mundo archivo cinco",
-      (error, data) => {
+    fs.readFile("./data/second.txt", "utf-8", (error, data) => {
+      if (error) {
         console.log(error);
-        console.log(data);
+    }
 
-        fs.writeFile(
-          "./data/seis.txt",
-          "hola mundo archivo seis",
-          (error, data) => {
-            console.log(error);
-            console.log(data);
-          }
-        );
-      }
-    );
+      console.log(data);
+
+      fs.writeFile(
+        "./data/cinco.txt",
+        "hola mundo archivo cinco",
+        (error, data) => {
+          console.log(error);
+          console.log(data);
+
+          fs.writeFile(
+            "./data/seis.txt",
+            "hola mundo archivo seis",
+            (error, data) => {
+              console.log(error);
+              console.log(data);
+            }
+          );
+       }
+      );
+    });
   });
-});
 
+  ```
 
-sin embargo tiene su fallo, es que el codigo se va haciendo a la derecha,(este ejemplo es de node anteriormente)
+Sin embargo tiene su fallo, es que el codigo se va haciendo a la derecha,(este ejemplo es de como se programaba al principio de node):
 
 === request === 
 

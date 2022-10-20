@@ -174,39 +174,37 @@ module.exports = group;
 
 ```
 
-#### Versión mejor para exportar
+#### Mejor manera para exportar
 
-Para ahorrar una linea de code podemos hacer lo siguiente:
-
-```
-  module.exports = {
-  web: www,
-  number: numer,
-  array: array,
-  user: name,
-};
-
-```
->hacer que module.export sea igual al objeto que queremos exportar
->sin la necesidad de crear la constante group
-
-
-#### versión mejor x2 para exportar
+Para ahorrar una linea de código podemos hacer lo siguiente:
 
 ```
   module.exports = {
-  www,
-  numer,
-  array,
-  name,
+    web: www,
+    number: numer,
+    array: array,
+    user: name,
+  };
+
+```
+> Hacer que module.export sea igual al objeto que queremos exportar sin la necesidad de crear la constante group
+
+
+#### Mejor manera(x2) para exportar
+
+```
+  module.exports = {
+    www,
+    numer,
+    array,
+    name,
   };
 
 ```
 
-podemos poner unicamente el nombre de las constantes 
-sin la necesidad de un nombre ahorrando tiempo.
+> Podemos poner unicamente el nombre de las constantes sin la necesidad de un nombre, ahorrando tiempo.
 
-#### versión mejor para importar
+#### Mejor manera para importar
 
 
 ```
@@ -215,7 +213,9 @@ sin la necesidad de un nombre ahorrando tiempo.
 
 ```
 
-con lo nuevo de js podemos importar solo una propiedad del objeto, en el caso anterior importamos el la propiedad name
+Con lo nuevo de js podemos importar solo una propiedad del objeto, en el caso anterior importamos la propiedad name.
+
+Ejemplo:
 
   ```
     const { name, www } = require("./module/myModule");
@@ -223,8 +223,7 @@ con lo nuevo de js podemos importar solo una propiedad del objeto, en el caso an
     console.log(www);
     
   ```
-Esto nos ayuda si el objeto es demasiado grande y a nosotros 
-solo nos importa ciertas cosas.
+> Esto nos ayuda si el objeto es demasiado grande y a nosotros solo nos importan ciertas cosas.
 
 ## Exports individuales
 

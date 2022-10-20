@@ -1,4 +1,4 @@
-===Notas del curso de nodeJS===
+#Notas del curso de nodeJS
 
 domingo 16 de octubre de 2022
 requisitos previos: HTML, CSS, JS

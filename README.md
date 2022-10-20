@@ -16,24 +16,24 @@ Es posible crear aplicaciones fullstack.
 
 ## Comandos básicos
 
-> Repel: interprete de node, nos permite ejecutar js de manera interactiva.(es equivalente a la consola del navegador)
+> Repel: Es el interprete de node que nos permite ejecutar Javascript de manera interactiva.(es equivalente a la consola dentro del  navegador).
 
-- node --version -> ver versión de node
-- .help -> muestra ayuda para ver los demas comandos
-- .exit -> salir de node
-- ctrl + d -> terminar node
-- ctrl + c -> matar el proceso
+- node --version -> ver versión de node.
+- .help -> muestra ayuda para ver los demas comandos.
+- .exit -> salir de node.
+- ctrl + d -> terminar node.
+- ctrl + c -> matar el proceso de node.
 
-NodeJS  puede interpretar codigo sin la necesidad de entrar en su terminal 
+NodeJS puede interpretar código sin la necesidad de entrar en su terminal.
 
 Ejemplo:
 
   ` node -e "console.log(10 + 10)" `
 
-Para guardar comando de replel con : 
+Para guardar comando de repel con : 
   `.save nombre_del_archivo`
 
-para cargar archivos guardados con : 
+Para cargar archivos guardados con : 
   `.load nombre_del_archivo`
 
 ## JavaScript

@@ -247,10 +247,10 @@ Ejemplo:
 
   ```
 
-> Notas: es poco útil, es valido, pero es mejor guardar todo en un objeto(como el ejemplo de arriba) podria servir sí del archivo no queremos exportar todo, un ejemplo podría ser una variable, una constante, etc.
+> Notas: Es poco útil, es valido, pero es mejor guardar todo en un objeto (como el ejemplo de arriba) podria servir sí del archivo no queremos exportar todo, un ejemplo podría ser una variable, una constante, etc.
 
 
-## modulos (OS)
+## Modulos (OS)
 
 Hay modulos dentro de node que se instalan a la par que node y podemos utilizarlos importandolos como cualquier otro modulo
 

@@ -13,15 +13,15 @@ utilizando v8 fue creado para soportar muchos usuarios sin la necesidad de mucho
 
 Es posible crear aplicaciones fullstack
 
-## comandos básicos ===
+## comandos básicos
 
-=>Repel: interprete de node, nos permite ejecutar js de manera interactiva.(es equivalente a la consola del navegador)
+> Repel: interprete de node, nos permite ejecutar js de manera interactiva.(es equivalente a la consola del navegador)
 
-node --version -> ver versión de node
-.help -> muestra ayuda para ver los demas comandos
-.exit -> salir de node
-ctrl + d -> terminar node
-ctrl + c -> matar el proceso
+- node --version -> ver versión de node
+- .help -> muestra ayuda para ver los demas comandos
+- .exit -> salir de node
+- ctrl + d -> terminar node
+- ctrl + c -> matar el proceso
 
 nodeJS  puede interpretar codigo sin la necesidad de entrar en su terminal 
 
@@ -31,12 +31,12 @@ ejemplo:
 para guardar comando de replel con : .sabe nombre_del_archivo
 para cargar archivos guardados con : .load nombre_del_archivo
 
-=== Js ===
+## Js
 
 se puede utilizar js vanilla  
 ejemplo:
 
-  let username = "angel";
+`  let username = "angel";
   let age = 20;
   let hobbies = true;
   let points = [10, 20, 30];
@@ -45,7 +45,7 @@ ejemplo:
     last: "montoya",
   };
   const pi = 3.1416;
-
+`
 ejemplo: 
 const age = 40;
 

@@ -1,9 +1,9 @@
-#Notas del curso de nodeJS
+# Notas del curso de nodeJS
 
 domingo 16 de octubre de 2022
 requisitos previos: HTML, CSS, JS
 
-=== ¿Qué es? ===
+## ¿Qué es?
 
 ES un entorno de ejecución de js (Javascript runtime enviorement)
 
@@ -13,7 +13,7 @@ utilizando v8 fue creado para soportar muchos usuarios sin la necesidad de mucho
 
 Es posible crear aplicaciones fullstack
 
-=== comandos básicos ===
+## comandos básicos ===
 
 =>Repel: interprete de node, nos permite ejecutar js de manera interactiva.(es equivalente a la consola del navegador)
 

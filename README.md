@@ -92,11 +92,11 @@ A diferencia del navegador en node tenemos objetos globales
 Ejemplo:
 
 ```
-  console.log(__dirname); => da la dirección completa actual del directorio.
-  console.log(__filename); => da la dirección completa actual del documento.
-  console.log(module); => da información como el id, path, filename. 
-  console.log(require); => da información varia.
-  console.log(process); => da información acerca de los procesos.
+  console.log(__dirname); => Proporciona la dirección completa actual del directorio.
+  console.log(__filename); => Proporciona la dirección completa actual del documento.
+  console.log(module); => Proporciona información como el id, path, filename. 
+  console.log(require); => Proporciona información varia.
+  console.log(process); => Proporciona información acerca de los procesos.
 
 ```
 

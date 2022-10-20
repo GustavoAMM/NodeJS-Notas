@@ -14,7 +14,7 @@ Utilizando v8 fue creado para soportar muchos usuarios sin la necesidad de mucho
 
 Es posible crear aplicaciones fullstack.
 
-## comandos básicos
+## Comandos básicos
 
 > Repel: interprete de node, nos permite ejecutar js de manera interactiva.(es equivalente a la consola del navegador)
 
@@ -36,7 +36,7 @@ Para guardar comando de replel con :
 para cargar archivos guardados con : 
   `.load nombre_del_archivo`
 
-## Js
+## JavaScript
 
 Se puede utilizar js vanilla  
 Ejemplo:
@@ -65,7 +65,7 @@ Ejemplo:
     }
 
   ```
-## node vs navegador
+## Node vs Navegador
 
 Como sabemos dentro del navegador podemos acceder con js a muchas funcionalidades de la web.
 
@@ -83,7 +83,7 @@ Ejemplo:
 - os.arch() 
 - os.homedir()
 
-## objetos globales
+## Objetos globales
 
 A diferencia del navegador en node tenemos objetos globales
 
@@ -98,7 +98,7 @@ Ejemplo:
 
 ```
 
-## timers
+## Timers
 
 Algunos los trae por defecto y sirve para tener un poco de control sobre el timepo de ejecición de un comando 
 
@@ -124,7 +124,7 @@ Ejemplo 2:
 Este es setTimeout y tiene que esperar algo para que pueda ejecutarse, en este caso tiene que esperar 5s para poder ejecutar el console.log
 
 
-## modulos
+## Modulos
 
 Como vimos antes module es un objeto global, es decir todos los archivos tienen acceso a él,
 podemos llenar el export con variables, constantes, y poder usarlo fuera
@@ -177,7 +177,7 @@ module.exports = group;
 
 ```
 
-### Versión mejor para exportar
+#### Versión mejor para exportar
 
 Para ahorrar una linea de code podemos hacer lo siguiente:
 
@@ -194,7 +194,7 @@ Para ahorrar una linea de code podemos hacer lo siguiente:
 >sin la necesidad de crear la constante group
 
 
-### versión mejor x2 para exportar
+#### versión mejor x2 para exportar
 
 ```
   module.exports = {
@@ -209,7 +209,7 @@ Para ahorrar una linea de code podemos hacer lo siguiente:
 podemos poner unicamente el nombre de las constantes 
 sin la necesidad de un nombre ahorrando tiempo.
 
-### versión mejor para importar
+#### versión mejor para importar
 
 
 ```
@@ -229,7 +229,7 @@ con lo nuevo de js podemos importar solo una propiedad del objeto, en el caso an
 Esto nos ayuda si el objeto es demasiado grande y a nosotros 
 solo nos importa ciertas cosas.
 
-## exports individuales
+## Exports individuales
 
 Como hemos visto anteriormente la manera en la que se le puede 
 asignar a export dentro de module si son mucho es atraves de 
@@ -251,7 +251,7 @@ Ejemplo:
     module.exports.www = { www };
     module.exports.array = { array };
 
-    ```
+  ```
 
 > Notas: es poco útil, es valido, pero es mejor guardar 
 > todo en un objeto(como el ejemplo de arriba) podria servir 

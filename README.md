@@ -418,32 +418,38 @@ Ejemplo de rutas:
 
   ```
 
-=== npm ===
+## npm 
 
-link => https://www.npmjs.com/
+[Págin oficial de npm] (https://www.npmjs.com/)
 
-repositorios de paquetes 
+Repositorios de paquetes.
 
-para instalar un modulo es:
+Para instalar un modulo es:
 
-npm install nomule_name => manera completa 
-npm i module_name => manera abreviada
-npm i moduel_name moduel_name2 moduel_name3 => instalar varios modulos a la vez
+  ```
+    npm install nomule_name => manera completa 
+    npm i module_name => manera abreviada
+    npm i moduel_name moduel_name2 moduel_name3 => instalar varios modulos a la vez
+  
+  ```
+  
+Cuando instalamos un paquete nos crea archivos automaticamente 
 
-cuando instalamos un paquete nos crea archivos automaticamente por ejemplo:
+Ejemplo:
 
--package.json => nos muestra las dependencias del proyecto
--package-lock.json => no es buena idea alterarlo a mano, es parte del funcionamiento de node
+- package.json => nos muestra las dependencias del proyecto
+- package-lock.json => no es buena idea alterarlo a mano, es parte del funcionamiento de node
 
-En cuanto instalamos muchos modulos la carpeta node_modules se va a comenzar a llenar y es muy recomendable no tocar nada
-el archivo package.json va a agregar los modulos que instalamos.
+En cuanto instalamos muchos modulos la carpeta node_modules se va a comenzar a llenar y es muy recomendable no tocar nada.
 
-si llegaramos a borrar la carpeta node_modules gracias al package.json y con el comando npm install automaticamente va a 
-descargar todos los modulos que necesita el pryecto
+El archivo package.json va a agregar los modulos que instalamos.
 
-tambien para borrar un modulo existe un comando:
+Sí llegaramos a borrar la carpeta node_modules gracias al package.json y con el comando `npm install` automaticamente va a 
+descargar todos los modulos que necesita el proyecto.
 
-npm remove module_name
+Tambien para borrar un modulo existe un comando:
+
+` npm remove module_name `
 
 === npm init === 
 

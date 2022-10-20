@@ -252,7 +252,7 @@ Ejemplo:
 
 ## Modulos (OS)
 
-Hay modulos dentro de node que se instalan a la par que node y podemos utilizarlos importandolos como cualquier otro modulo
+Hay modulos dentro de node que se instalan a la par que node y podemos utilizarlos importandolos como cualquier otro modulo.
 
 Ejemplo:
 
@@ -272,35 +272,42 @@ Ejemplo:
 
   ```
 
-## modulos (path)
+## Modulos (path)
 
-En este modulo es de suma importancia tener en cuenta el entorno de donde se esta desarrollando ya que las rutas cambian 
-dependiendo del sistema operativo.
+En este modulo es de suma importancia tener en cuenta el entorno de donde se esta desarrollando ya que las rutas cambian dependiendo del sistema operativo.
 
-Ejemplo: en windows es => C:\\user\\angel\\escritorio\\ejemplo
-y en linux es => home/angel/escritorio
+Ejemplo: 
 
-y debemos tenerlo en cuenta ya que normalmente en los servidores que se montan usan linux como sistema operativo
-y con el modulo path nos ayuda a solucionar este dilema.
+```
+  En windows es => C:\\user\\angel\\escritorio\\ejemplo
+  En linux es => home/angel/escritorio
 
-ejemplo: 
+```
 
-const path = require("path");
-console.log(path.join("home", "angel", "escritorio"));
+Debemos tenerlo en cuenta ya que normalmente en los servidores que se montan, usan linux como sistema operativo pero con el modulo path nos ayudará a solucionar este dilema.
 
+Ejemplo: 
 
-❯ node path.js
-home/angel/escritorio
+  ```
+  const path = require("path");
+  console.log(path.join("home", "angel", "escritorio"));
 
-ejemĺo: 
+  home/angel/escritorio => salida por consola
 
-const path = require("path");
+  ```
 
-const filepath = path.join("home", "escritorio", "MERN", "NodeJS");
-console.log(path.basename(filepath)); => nos na el nombre del archivo
-console.log(path.dirname(filepath)); => nos da la ruta del archivo
-console.log(path.parse(filepath)); = > parsea la ruta a un objeto de tipo json
-console.log(path.resolve(filepath)); => resuelve la ruta por si esta incompleta
+Ejemĺo de utilidad:  
+
+  ```
+    const path = require("path");
+
+    const filepath = path.join("home", "escritorio", "MERN", "NodeJS");
+    console.log(path.basename(filepath)); => nos na el nombre del archivo
+    console.log(path.dirname(filepath)); => nos da la ruta del archivo
+    console.log(path.parse(filepath)); = > parsea la ruta a un objeto de tipo json
+    console.log(path.resolve(filepath)); => resuelve la ruta por si esta incompleta
+
+  ```
 
 === modulo (fs) part1 ===
 

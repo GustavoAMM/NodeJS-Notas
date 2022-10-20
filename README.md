@@ -383,35 +383,40 @@ Ejemplo:
 
 Sin embargo tiene su fallo, es que el codigo se va haciendo a la derecha,(este ejemplo es de como se programaba al principio de node):
 
-=== request === 
+## Request
 
-Es información acerca del cliente que despues yo puedo utilizar en el backend 
-ejemplo de rutas:
+Es información acerca del cliente que despues se puede utilizar en el backend.
 
-const http = require("http");
+Ejemplo de rutas:
 
-http
-  .createServer((request, response) => {
-    console.log(request.url);
-    if (request.url === "/") {
-      response.write("Welcome to the server");
-      return response.end();
-    }
-    if (request.url === "/about") {
-      response.write("acerca de");
-      return response.end();
-    }
+  ```
 
-    response.write(`
-    <h1>Not found</h1>
-    <p>Esta pagina no fue encontrada xd<p>
-    <a href="/">Volver a la pagina principal</a>
-    `);
-    response.end();
-  })
-  .listen(3000);
+    const http = require("http");
 
-console.log("servidor escuchando puerto 3000");
+    http
+      .createServer((request, response) => {
+        console.log(request.url);
+        if (request.url === "/") {
+          response.write("Welcome to the server");
+          return response.end();
+        }
+        if (request.url === "/about") {
+          response.write("acerca de");
+          return response.end();
+        }
+
+        response.write(`
+        <h1>Not found</h1>
+        <p>Esta pagina no fue encontrada xd<p>
+        <a href="/">Volver a la pagina principal</a>
+        `);
+        response.end();
+      })
+      .listen(3000);
+
+    console.log("servidor escuchando en el puerto 3000");
+
+  ```
 
 === npm ===
 

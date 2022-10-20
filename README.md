@@ -102,7 +102,7 @@ Ejemplo:
 
 ## Timers
 
-Algunos los trae por defecto y sirve para tener un poco de control sobre el timepo de ejecición de un comando 
+Algunos los trae por defecto y sirve para tener un poco de control sobre el tiempo de ejecución de un comando.
 
 Ejemplo:
 
@@ -113,7 +113,7 @@ Ejemplo:
 
   ```
 
-Esta es setInterval y cada dos segundos va a ejecutar una función flecha, en este caso es un console.log
+> Este es setInterval y cada dos segundos va a ejecutar una función flecha, que en este caso es un console.log("hola mundo")
 
 Ejemplo 2: 
 
@@ -123,7 +123,7 @@ Ejemplo 2:
     }, 5000);
 
   ```
-Este es setTimeout y tiene que esperar algo para que pueda ejecutarse, en este caso tiene que esperar 5s para poder ejecutar el console.log
+> Este es setTimeout y tiene que esperar algo para que pueda ejecutarse, en este caso tiene que esperar 5s para poder ejecutar el console.log("Hola mundo")
 
 
 ## Modulos

@@ -420,7 +420,7 @@ Ejemplo de rutas:
 
 ## npm 
 
-[Págin oficial de npm] (https://www.npmjs.com/)
+[Página oficial de npm](https://www.npmjs.com/)
 
 Repositorios de paquetes.
 

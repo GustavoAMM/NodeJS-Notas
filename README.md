@@ -68,7 +68,7 @@ Ejemplo:
   ```
 ## Node vs Navegador
 
-Como sabemos dentro del navegador podemos acceder con js a muchas funcionalidades de la web.
+Como sabemos dentro de la consola del navegador podemos acceder con JavaScript a muchas funcionalidades de la web.
 
 Ejemplo: 
 
@@ -77,9 +77,10 @@ Ejemplo:
 - document.body.innerHTML 
 - etc
 
-En node tenemos acceso a diferentes objetos del sistema operativo ya que en este se esta executando node.
+En node tenemos acceso a diferentes objetos del sistema operativo ya que este es el lugar donde se esta ejecutando node.
 
 Ejemplo: 
+
 - os.userInfo() 
 - os.arch() 
 - os.homedir()

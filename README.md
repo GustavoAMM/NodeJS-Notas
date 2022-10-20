@@ -451,38 +451,55 @@ Tambien para borrar un modulo existe un comando:
 
 ` npm remove module_name `
 
-=== npm init === 
+## npm init 
 
-anteriormente vismo como se creo el package.json automaticamente, sin embargo nosotros tambien podemos crearlo con el 
+Anteriormente vimos como se creo el package.json automaticamente, sin embargo nosotros tambien podemos crearlo con el 
 siguiente comando, el cual nos hará varias preguntas:
 
-npm init 
+ `npm init`
 
-dentro del package.json esta un apartado de scripts, y dentro de este podemos establecer nuestros propios comandos, no necesariamente el de test
+Dentro del package.json esta un apartado de scripts, y dentro de este podemos establecer nuestros propios comandos, no necesariamente el de test.
 
-por ejemplo:
+Ejemplo:
 
-"scripts": {
-    "ejecutar": "node app.js"
-  }
+  ```
+    "scripts": {
+      "ejecutar": "node app.js"
+    }
 
-npm run ejecutar => comadno para correr el comando "ejecutar" esto nos ayuda a ponerle un alias a comando necesrios, largos y repetitivos. Esto nos ayuda a ahorrar tiempo
+  ```
 
-hay comandos tan comunes en proyectos que incluso npm nos permite abreviar mas.
-por ejemplo el comando start todo proyecto lo va a tener:
+  ```
+    npm run ejecutar => comando para correr el comando "ejecutar" esto nos ayuda a ponerle un alias a comando necesrios, largos y repetitivos. Esto nos ayuda a ahorrar tiempo
 
-npm run start => comando completo
-npm star => comando que ya reconoce npm 
+  ```
 
-los scripts solo deben de estar una sola vez.(NO puede haber comadno iguales)
+Hay comandos tan comunes en proyectos que incluso npm nos permite abreviar mas.
 
-dentro del package.json hay un apartado de dependencias que es para que nuestra aplicación funcione, sin embargo, hay dependencias para que solo se ocupan en el entorno de desarollo como por ejemplo nodemon:
+Ejemplo el comando `start` todo proyecto lo va a tener:
 
-para instalar un paquete que solo sirve para desarrllo ocupamos el siguiente comando:
+  ```
+    npm run start => comando completo
+    npm star => comando que ya reconoce npm 
 
-npi i module_name -D
+  ```
 
-este comando creará una nueva sección en el package.json llamado: "devDependencies"
+Los scripts solo deben de estar una sola vez.(**NO** puede haber comandos iguales).
+
+Dentro del package.json hay un apartado de dependencias que es para que nuestra aplicación funcione, sin embargo, hay dependencias para que solo se ocupan en el entorno de desarollo. 
+
+Ejemplo:
+
+  `nodemon`
+
+Para instalar un paquete que solo sirve para desarrollo ocupamos el siguiente comando:
+
+  ```
+    npi i module_name -D
+
+  ```
+
+Este comando creará una nueva sección en el package.json llamado: "devDependencies"
 
 === modulos globales === 
 

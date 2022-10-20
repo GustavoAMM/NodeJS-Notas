@@ -90,161 +90,198 @@ A diferencia del navegador en node tenemos objetos globales
 Ejemplo:
 
 ```
-  console.log(__dirname); => da la dirección completa actual del directorio
-  console.log(__filename); => da la dirección completa actual del documento
+  console.log(__dirname); => da la dirección completa actual del directorio.
+  console.log(__filename); => da la dirección completa actual del documento.
+  console.log(module); => da información como el id, path, filename. 
+  console.log(require); => da información varia.
+  console.log(process); => da información acerca de los procesos.
 
-  console.log(module); => da información como el id, path, filename, 
-  console.log(require); => da información varia
-  console.log(process); => da información acerca de los procesos por ejemplo: version de node, del v8, del uv, etc.
 ```
 
-=== timers ===
+## timers
 
-algunos los trae por defecto y sirve para tener un poco de control sobre el timepo de ejecición de un comando 
+Algunos los trae por defecto y sirve para tener un poco de control sobre el timepo de ejecición de un comando 
 
 Ejemplo:
 
+  ```
     setInterval(() => {
       console.log("hola mundo");
     }, 2000);
 
-esta es setInterval y cada dos segundos va a ejecutar una función flecha, en este caso es un console.log
+  ```
+
+Esta es setInterval y cada dos segundos va a ejecutar una función flecha, en este caso es un console.log
 
 Ejemplo 2: 
 
+ ```   
     setTimeout(() => {
       console.log("Hola mundo");
     }, 5000);
 
-este es setTimeout y tiene que esperar algo para que pueda ejecutarse, en este caso tiene que esperar 5s para poder ejecutar el console.log
+  ```
+Este es setTimeout y tiene que esperar algo para que pueda ejecutarse, en este caso tiene que esperar 5s para poder ejecutar el console.log
 
 
-=== modulos ===
+## modulos
 
-como vimos antes module es un objeto global, es decir todos los archivos tienen acceso a él,
+Como vimos antes module es un objeto global, es decir todos los archivos tienen acceso a él,
 podemos llenar el export con variables, constantes, y poder usarlo fuera
 
 Ejemplo:
 
+
+  ``` 
     const www = "cisco.com";
-
     module.exports = www;
-
     console.log(module);
+
+  ```
 
 exportar una constante, ahora desde module podemos acceder a ella
 
 para importar es:
 
-const www = require("./module/mymodule"); => se necesita la ruta relativa, para especificar que archivo importar, y se guarda en una constante 
+```
+  const www = require("./module/mymodule"); => se necesita la ruta 
+  relativa, para especificar que archivo importar, y 
+  se guarda en una constante 
 
-console.log(www);
+  console.log(www);
 
-PERO sí  queremos exportar mas de una cosa, por ejemplo mas constantes, podemos meter todas las constantes en un nuevo objeto y 
+```
+
+*Pero* sí  queremos exportar mas de una cosa, por ejemplo mas constantes, podemos meter todas las constantes en un nuevo objeto y 
 exportar el objeto.
 
 Ejemplo: 
 
-const www = "cisco.com";
-const numer = 123;
-const array = [1, 2, 3, 4];
-const name = {
-  name: "angel",
-  age: 20,
-};
+```
+  const www = "cisco.com";
+  const numer = 123;
+  const array = [1, 2, 3, 4];
+  const name = {
+    name: "angel",
+    age: 20,
+  };
 
-const group = {
+  const group = {
   web: www,
   number: numer,
   array: array,
   user: name,
-};
+  };
 
 module.exports = group;
 
-####### Versió mejor para exportar ######
+```
 
-para ahorrar una linea de code podemos hacer lo siguiente:
+### Versión mejor para exportar
 
-module.exports = {
+Para ahorrar una linea de code podemos hacer lo siguiente:
+
+```
+  module.exports = {
   web: www,
   number: numer,
   array: array,
   user: name,
 };
 
-hacer que module.export sea igual al objeto que queremos exportar, sin la necesidad de crear la constante group
+```
+>hacer que module.export sea igual al objeto que queremos exportar
+>sin la necesidad de crear la constante group
 
 
-#### versión mejor x2 para exportar ####
+### versión mejor x2 para exportar
 
-module.exports = {
+```
+  module.exports = {
   www,
   numer,
   array,
   name,
-};
+  };
 
-podemos poner unicamente el nombre de las constantes sin la necesidad de un nombre ahorrando tiempo.
+```
 
-### versión mejor para importar ####
+podemos poner unicamente el nombre de las constantes 
+sin la necesidad de un nombre ahorrando tiempo.
 
+### versión mejor para importar
+
+
+```
   const { name } = require("./module/myModule");
-
   console.log(name);
+
+```
 
 con lo nuevo de js podemos importar solo una propiedad del objeto, en el caso anterior importamos el la propiedad name
 
-  const { name, www } = require("./module/myModule");
+  ```
+    const { name, www } = require("./module/myModule");
+    console.log(name);
+    console.log(www);
+    
+  ```
+Esto nos ayuda si el objeto es demasiado grande y a nosotros 
+solo nos importa ciertas cosas.
 
-  console.log(name);
-  console.log(www);
+## exports individuales
 
-  esto nos ayuda si el objeto es demasiado grande y a nosotros solo nos importa ciertas cosas.
-
-=== exports individuales ===
-
-como hemos visto anteriormente la manera en la que se le puede asignar a export dentro de module si son mucho es atraves de un objeto y al ser un objeto podemos insertar de manera diferente.
+Como hemos visto anteriormente la manera en la que se le puede 
+asignar a export dentro de module si son mucho es atraves de 
+un objeto y al ser un objeto podemos insertar de manera diferente.
 
 Ejemplo:
 
-const www = "cisco.com";
-const numer = 123;
-const array = [1, 2, 3, 4];
-const name = {
-  name: "angel",
-  age: 20,
-};
+  ```
+    const www = "cisco.com";
+    const numer = 123;
+    const array = [1, 2, 3, 4];
+    const name = {
+      name: "angel",
+      age: 20,
+    };
 
-module.exports.name = { name };
-module.exports.numer = { numer };
-module.exports.www = { www };
-module.exports.array = { array };
+    module.exports.name = { name };
+    module.exports.numer = { numer };
+    module.exports.www = { www };
+    module.exports.array = { array };
 
-Notas => es poco útil, es valido, pero es mejor guardar todo en un objeto(como el ejemplo de arriba) podria servir si del archivo no queremos exportar todo, un ejemplo podria ser una variable, una constante, etc.
+    ```
 
-
-=== modulos (OS) ===
-
-hay modulos dentro de node que se instalan a la par que node y podemos utilizarlos importandolos como cualquier otro modulo
-ejemplo:
-
-
-const os = require("os");
-
-console.log(os.userInfo());
-console.log(os.uptime());
-console.log(os.platform());
-console.log(os.totalmem());
-console.log(os.freemem());
-console.table({
-  os: os.platform(),
-  version: os.release(),
-  memoria: os.totalmem(),
-});
+> Notas: es poco útil, es valido, pero es mejor guardar 
+> todo en un objeto(como el ejemplo de arriba) podria servir 
+> si del archivo no queremos exportar todo, un ejemplo podria 
+> ser una variable, una constante, etc.
 
 
-=== modulos (path) ===
+## modulos (OS)
+
+Hay modulos dentro de node que se instalan a la par que node y podemos utilizarlos importandolos como cualquier otro modulo
+
+Ejemplo:
+
+  ```
+    const os = require("os");
+
+    console.log(os.userInfo());
+    console.log(os.uptime());
+    console.log(os.platform());
+    console.log(os.totalmem());
+    console.log(os.freemem());
+    console.table({
+      os: os.platform(),
+      version: os.release(),
+      memoria: os.totalmem(),
+    });
+
+  ```
+
+## modulos (path)
 
 En este modulo es de suma importancia tener en cuenta el entorno de donde se esta desarrollando ya que las rutas cambian 
 dependiendo del sistema operativo.

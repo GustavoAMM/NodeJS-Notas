@@ -128,11 +128,9 @@ Ejemplo 2:
 
 ## Modulos
 
-Como vimos antes module es un objeto global, es decir todos los archivos tienen acceso a él,
-podemos llenar el export con variables, constantes, y poder usarlo fuera
+Como vimos antes module es un objeto global, es decir, todos los archivos tienen acceso a él.Podemos llenar el *export* con variables, constantes, etc, y poder usarlos fuera.
 
 Ejemplo:
-
 
   ``` 
     const www = "cisco.com";
@@ -141,21 +139,18 @@ Ejemplo:
 
   ```
 
-exportar una constante, ahora desde module podemos acceder a ella
+> Esto exporta una constante, ahora desde module podemos acceder a ella
 
-para importar es:
+Para importar es:
 
 ```
-  const www = require("./module/mymodule"); => se necesita la ruta 
-  relativa, para especificar que archivo importar, y 
-  se guarda en una constante 
+  const www = require("./module/mymodule"); => Se necesita la ruta relativa para especificar que archivo importar, y se guarda en una constante 
 
   console.log(www);
 
 ```
 
-*Pero* sí  queremos exportar mas de una cosa, por ejemplo mas constantes, podemos meter todas las constantes en un nuevo objeto y 
-exportar el objeto.
+**Pero** sí queremos exportar mas de una cosa podemos anidar todo, por ejemplo, muchas mas constantes, podemos meter todas las constantes en un nuevo objeto y exportar el objeto.
 
 Ejemplo: 
 

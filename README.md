@@ -2,15 +2,15 @@
 
 > Domingo 16 de octubre de 2022.
 >
-> requisitos previos: HTML, CSS, JS
+> Requisitos previos: HTML, CSS, JS.
 
 ## ¿Qué es?
 
-Es un entorno de ejecución de js (Javascript runtime enviorement).
+Es un entorno de ejecución de JavaScript (Javascript runtime enviorement).
 
-Programa que nos permite utilizar js para uso de aplicaciones de escritorio, servidor, consola haciendo js de uso generar y no solo en el navegador.
+Programa que nos permite utilizar JavaScript para uso de aplicaciones de escritorio, servidor, consola, haciendo JavaScript de uso generar y no solo en el navegador.
 
-Utilizando v8 fue creado para soportar muchos usuarios sin la necesidad de muchos recursos.
+Utilizando el motor de google v8 fue creado para soportar muchos usuarios sin la necesidad de muchos recursos.
 
 Es posible crear aplicaciones fullstack.
 

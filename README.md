@@ -1,15 +1,15 @@
 # Notas del curso de nodeJS
 
-domingo 16 de octubre de 2022
-requisitos previos: HTML, CSS, JS
+> Domingo 16 de octubre de 2022
+> requisitos previos: HTML, CSS, JS
 
 ## ¿Qué es?
 
-ES un entorno de ejecución de js (Javascript runtime enviorement)
+Es un entorno de ejecución de js (Javascript runtime enviorement)
 
 Programa que nos permite utilizar js para uso de aplicaciones de escritorio, servidor, consola haciendo js de uso generar y no solo en el navegador.
 
-utilizando v8 fue creado para soportar muchos usuarios sin la necesidad de muchos recursos.
+Utilizando v8 fue creado para soportar muchos usuarios sin la necesidad de muchos recursos.
 
 Es posible crear aplicaciones fullstack
 
@@ -26,7 +26,7 @@ Es posible crear aplicaciones fullstack
 nodeJS  puede interpretar codigo sin la necesidad de entrar en su terminal 
 
 ejemplo:
-  node -e "console.log(10 + 10)"
+` node -e "console.log(10 + 10)" `
 
 para guardar comando de replel con : .sabe nombre_del_archivo
 para cargar archivos guardados con : .load nombre_del_archivo

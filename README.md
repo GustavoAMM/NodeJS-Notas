@@ -31,7 +31,7 @@ Ejemplo:
   ` node -e "console.log(10 + 10)" `
 
 Para guardar comando de replel con : 
-  `.save nombre_del_archivoi`
+  `.save nombre_del_archivo`
 
 para cargar archivos guardados con : 
   `.load nombre_del_archivo`
@@ -39,18 +39,20 @@ para cargar archivos guardados con :
 ## Js
 
 se puede utilizar js vanilla  
-ejemplo:
+Ejemplo:
 
-`  let username = "angel";
-  let age = 20;
-  let hobbies = true;
-  let points = [10, 20, 30];
-  let user = {
-    name: "angel",
-    last: "montoya",
-  };
-  const pi = 3.1416;
-`
+  ```
+      let username = "angel";
+      let age = 20;
+      let hobbies = true;
+      let points = [10, 20, 30];
+      let user = {
+        name: "angel",
+        last: "montoya",
+      };
+      const pi = 3.1416;
+  ```
+
 ejemplo: 
 const age = 40;
 

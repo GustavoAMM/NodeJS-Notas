@@ -38,7 +38,8 @@ Para cargar archivos guardados con :
 
 ## JavaScript
 
-Se puede utilizar js vanilla  
+Se pueden utilizar comandos de JavaScript vanilla dentro de node.
+
 Ejemplo:
 
   ```

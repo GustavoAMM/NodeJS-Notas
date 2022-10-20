@@ -38,7 +38,7 @@ para cargar archivos guardados con :
 
 ## Js
 
-se puede utilizar js vanilla  
+Se puede utilizar js vanilla  
 Ejemplo:
 
   ```
@@ -53,15 +53,18 @@ Ejemplo:
       const pi = 3.1416;
   ```
 
-ejemplo: 
-const age = 40;
+Ejemplo: 
 
-  if (age > 30) {
-    console.log("Es mayor a 30");
-  } else {
-   console.log("Es menor a 30");
-  }
+  ```
+    const age = 40;
 
+    if (age > 30) {
+      console.log("Es mayor a 30");
+    } else {
+    console.log("Es menor a 30");
+    }
+
+  ```
 === node vs navegador === 
 
 como sabemos dentro del navegador podemos acceder con js a muchas funcionalidades de la web

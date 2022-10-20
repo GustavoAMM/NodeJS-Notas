@@ -1,8 +1,8 @@
 # Notas del curso de nodeJS
 
 > Domingo 16 de octubre de 2022.
->
 > Requisitos previos: HTML, CSS, JS.
+> By Gustavo Angel Montoya Martínez
 
 ## ¿Qué es?
 
